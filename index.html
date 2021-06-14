@@ -8,73 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .banner {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .banner img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-        }
-
-        .banner h2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 16vw;
-            line-height: 14vw;
-            background: #fff;
-            color: #000;
-            mix-blend-mode: screen;
-            font-weight: bolder;
-            font-family: VEBold, sans-serif;
-            letter-spacing: -11px;
-        }
-
-        .banner h2 span.text {
-            z-index: 100;
-        }
-
-        /* .banner h2:hover span.text {
-            mix-blend-mode: difference;
-            color: #fff;
-        } */
-
-        /* span.text:hover~span.mouse {
-            transition: width 0.25s, height 0.25s;
-            width: 450px;
-            height: 450px;
-        } */
-
-        .banner span.mouse {
-            transition: width 0.25s, height 0.25s;
-            z-index: 1;
-            pointer-events: none;
-            width: 300px;
-            height: 300px;
-            position: absolute;
-            background: #000;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
     </style>
 </head>
 
@@ -82,10 +15,21 @@
     <div class="banner">
         <img src="./media/index.html.jpeg" alt="">
         <h2 class="text-center">
-            <span class="text">KMM</span>
+            <span class="text">explore the <br> unknown</span>
             <span class="mouse" #bannerMouse></span>
-            <br>
         </h2>
+        <button>explore</button>
+    </div>
+    <div class="navbar">
+        <div class="search">
+            <img src="./media/Asset 1.png" alt="">
+            <input type="text">
+        </div>
+        <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
     </div>
     <script src="./js/main.js"></script>
 </body>

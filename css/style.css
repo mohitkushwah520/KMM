@@ -1,0 +1,140 @@
+@font-face {
+    font-family: text1;
+    src: url('./Bauhaus\ 93\ Regular.ttf') format('opentype');
+}
+@font-face {
+    font-family: text;
+    src: url('./Raleway-VariableFont_wght.ttf') format('opentype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.banner h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    line-height: 10.5vw;
+    letter-spacing: .5rem;
+    background: #fff;
+    color: #000;
+    mix-blend-mode: screen;
+    /* font-weight: bolder; */
+    /* font-family: VEBold, sans-serif; */
+    /* letter-spacing: -11px; */
+}
+
+.banner h2 span.text {
+    z-index: 100;
+    font-family: text1,sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* .banner h2:hover span.text {
+    mix-blend-mode: difference;
+    color: #fff;
+} */
+
+/* span.text:hover~span.mouse {
+    transition: width 0.25s, height 0.25s;
+    width: 450px;
+    height: 450px;
+} */
+
+.banner span.mouse {
+    transition: width 0.25s, height 0.25s;
+    z-index: 1;
+    pointer-events: none;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+button{
+    background-color: transparent;
+    border: 1px solid #fff;
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-size: 2rem;
+    mix-blend-mode: difference;
+    color: #fff;
+    cursor: pointer;
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+.navbar ul li{
+    margin: 0 3rem;
+}
+.navbar ul li:last-child{
+    margin-right: 0;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    font-family: text,sans-serif;
+}
+.navbar .search{
+    position: relative;
+    width: 50%;
+}
+.navbar img{
+    position: absolute;
+    top: 0%;
+    transform: translateY(-10%);
+    width: 20px;
+    left: 0;
+}
+.navbar input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    height: 30px;
+    padding: 2rem;
+    transform: translateY(-50%);
+}
