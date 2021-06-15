@@ -13,9 +13,11 @@
 
 <body>
     <div class="banner">
-        <img src="./media/index.html.jpeg" alt="">
+        <!-- <img src="./media/index.html.jpeg" alt=""> -->
         <h2 class="text-center">
-            <span class="text">explore the <br> unknown</span>
+            <p>
+                <span class="text">explore the <br> unknown</span>
+            </p>
             <span class="mouse" #bannerMouse></span>
         </h2>
         <button>explore</button>
@@ -32,6 +34,32 @@
         </ul>
     </div>
     <script src="./js/main.js"></script>
+    <script>
+         const link = document.querySelectorAll('.text-center p');
+
+    const animateit = function (e) {
+        console.log('work')
+      const span = this.querySelector('span.text');
+      const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+
+      move = 50,
+      xMove = x / width * (move * 2) - move,
+      yMove = y / height * (move * 2.5) - move;
+
+      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+      if (e.type === 'mouseleave'){
+        span.style.transform = ''
+      }
+    };
+
+
+
+    link.forEach(b => b.addEventListener('mousemove', animateit));
+    link.forEach(b => b.addEventListener('mouseleave', animateit));
+
+    </script>
 </body>
 
 </html>
